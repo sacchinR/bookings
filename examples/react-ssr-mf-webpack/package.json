@@ -1,0 +1,10 @@
+{
+  "name": "react-ssr-mf-webpack-example",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start:remote": "node remote/src/server.js",
+    "start:host": "node host/src/server.js",
+    "check": "node --check host/src/server.js && node --check host/src/client.js && node --check host/src/template.js && node --check remote/src/server.js && node --check remote/src/ssr.js && node --check remote/src/remoteEntry.js && node --check webpack/host.server.js && node --check webpack/host.client.js && node --check webpack/remote.server.js && node --check webpack/remote.client.js"
+  }
+}
