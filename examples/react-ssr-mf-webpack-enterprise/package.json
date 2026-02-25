@@ -18,7 +18,7 @@
     "build:client": "webpack --config webpack.config.js",
     "build:ssr": "webpack --config webpack.ssr.js",
     "start:ssr": "node server/index.js",
-    "check": "node --check webpack.config.js && node --check webpack.ssr.js && node --check scripts/run.js && node --check server/index.js"
+    "check": "node --check webpack.config.js && node --check webpack.ssr.js && node --check scripts/run.js && node --check server/index.js && node --check core/Store/store.js && node --check core/Store/shellSlice.js && node --check core/Store/sharedActions.js && node --check core/Store/sharedSelectors.js"
   },
   "dependencies": {
     "@babel/core": "^7.27.4",

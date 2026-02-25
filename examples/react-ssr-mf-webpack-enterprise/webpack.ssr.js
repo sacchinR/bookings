@@ -3,6 +3,7 @@ const { ModuleFederationPlugin } = require('webpack').container;
 const dotenv = require('dotenv');
 
 const env = dotenv.config().parsed || {};
+const deps = require('./package.json').dependencies;
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -46,7 +47,9 @@ module.exports = {
       },
       shared: {
         react: { singleton: true },
-        'react-dom': { singleton: true }
+        'react-dom': { singleton: true },
+        'react-redux': { singleton: true, requiredVersion: deps['react-redux'] },
+        '@reduxjs/toolkit': { singleton: true, requiredVersion: deps['@reduxjs/toolkit'] }
       }
     })
   ],

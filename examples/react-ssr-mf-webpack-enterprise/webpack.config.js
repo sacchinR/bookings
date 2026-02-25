@@ -172,14 +172,16 @@ module.exports = {
       exposes: {
         './sharedSelectors': './core/Store/sharedSelectors.js',
         './sharedActions': './core/Store/sharedActions.js',
-        './sharedComponents': './src/components/sharedComponents.js'
+        './sharedComponents': './src/components/sharedComponents.js',
+        './sharedStore': './core/Store/store.js'
       },
       shared: {
         ...deps,
         react: { singleton: true, requiredVersion: deps.react },
         'react-dom': { singleton: true, requiredVersion: deps['react-dom'] },
         'react-redux': { singleton: true, requiredVersion: deps['react-redux'] },
-        'react-router-dom': { singleton: true, requiredVersion: deps['react-router-dom'] }
+        'react-router-dom': { singleton: true, requiredVersion: deps['react-router-dom'] },
+        '@reduxjs/toolkit': { singleton: true, requiredVersion: deps['@reduxjs/toolkit'] }
       }
     }),
     new webpack.DefinePlugin({

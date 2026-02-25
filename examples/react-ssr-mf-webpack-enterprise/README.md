@@ -4,9 +4,10 @@ I used your webpack strategy and package structure to create this example:
 
 - Environment-driven remotes (`REACT_APP_*_REMOTE_MFE`)
 - Template-driven build switch (`REACT_APP_TEMPLATES`)
-- Shared exports (`sharedSelectors`, `sharedActions`, `sharedComponents`)
+- Shared exports (`sharedSelectors`, `sharedActions`, `sharedComponents`, `sharedStore`)
 - Separate client (`webpack.config.js`) and SSR (`webpack.ssr.js`) builds
 - Fastify SSR server entrypoint (`server/index.js`)
+- Redux Toolkit store (`configureStore`) is configured in `core/Store/store.js` and shared as a singleton across host/remotes via Module Federation.
 
 ## Files to review first
 
